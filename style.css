@@ -1,0 +1,121 @@
+*,
+button {
+  font-family: "Lato", serif;
+  text-transform: uppercase;
+}
+button {
+  border: none;
+  background: none;
+}
+
+img {
+  width: 120px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px;
+}
+
+i {
+  color: #eb4d4c;
+}
+
+/* ***** GRID TEMPLATE ***** */
+.container {
+  color: #5e5e5e;
+  width: 700px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "player1 newg player2"
+    "player1 dice player2"
+    "curent1 buttons current2";
+  gap: 15px;
+  background: linear-gradient(to right, #f7f7f7 50%, #ffffff 50%);
+  padding: 20px;
+  border: 1px solid #5e5e5e;
+}
+
+#newgamebtn {
+  grid-area: newg;
+  height: 30px;
+}
+
+.player_0 {
+  grid-area: player1 player1 player1;
+  text-align: center;
+  font-size: 25px;
+}
+
+.player_1 {
+  grid-area: player2 player2;
+  text-align: center;
+  font-size: 25px;
+}
+
+.round-player1,
+.round-player0 {
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  background-color: #eb4d4c;
+  padding: 10px;
+}
+
+#current_0,
+#current_1 {
+  color: #f7f7f7;
+  margin: 0 auto;
+}
+
+#dice-area {
+  grid-area: newg;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.btns {
+  grid-area: buttons;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#rolldice {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 i {
+  display: none;
+}
+
+.player_active .player_name {
+  font-weight: bold;
+}
+.player_active i {
+  display: inline;
+}
+.player_active p {
+  font-weight: bold;
+}
+
+.player_winner {
+  color: #eb4d4c;
+}
