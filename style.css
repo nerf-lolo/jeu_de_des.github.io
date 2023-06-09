@@ -33,7 +33,7 @@ i {
   grid-template-areas:
     "player1 newg player2"
     "player1 dice player2"
-    "curent1 buttons current2";
+    "player1 buttons player2";
   gap: 15px;
   background: linear-gradient(to right, #f7f7f7 50%, #ffffff 50%);
   padding: 20px;

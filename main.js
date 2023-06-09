@@ -32,6 +32,7 @@ const switchPlayer = function () {
   // Sinon on change de jouer, si c'est le joueur 1 on passe au 0 et vice-verca
   document.getElementById(`current_${activePlayer}`).textContent = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
+  console.log(activePlayer);
   currentScore = 0;
   // Change de style selon le jouer actif
   player_0.classList.toggle("player_active");
@@ -59,7 +60,6 @@ rollTheDice.addEventListener("click", () => {
   if (playGame) {
     // Génère un nombre random de 1 à 6
     let randomNumber = Math.floor(Math.random() * 6) + 1;
-
     // Génère une face de dès de 1 à 6 en fonction du 'randomNumber'
     let diceImage = `assets/dice${randomNumber}.png`;
     let imgDice = document.querySelector("img");
@@ -90,8 +90,6 @@ holdScore.addEventListener("click", () => {
         .querySelector(`.player_${activePlayer}`)
         .classList.add("player_winner");
       document;
-      // .querySelector(`.player_${activePlayer}`)
-      // .classList.add("player_active");
       dice.classList.add("hidden");
     } else {
       switchPlayer();
